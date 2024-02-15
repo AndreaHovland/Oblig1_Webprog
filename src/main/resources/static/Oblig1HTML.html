@@ -2,9 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0>
+    <title>Kinobilettregistrering</title>
 </head>
 <body>
+    <h1>Kinobillettregistrering</h1>
 
+    <label for="name">Navn:</label>
+    <input type="text" id="name"><br><br>
+
+    <label for="email">E-post:</label>
+    <input type="email" id="email"><br><br>
+
+    <label for="phone">Telefonnummer:</label>
+    <input type="text" id="phone"><br><br>
+
+    <label for="movie">Film:</label>
+    <input type="text" id="movie"><br><br>
+
+    <buttom onclick="submitTicket()">Kjøp billett</buttom>
+    <buttom onclick="deleteAllTickets()">Slett alle billettene</buttom>
+
+    <h2>Alle billetter:</h2>
+    <ul id="ticketlist"></ul>
+
+    <script src="script.js"></script>
 </body>
 </html>

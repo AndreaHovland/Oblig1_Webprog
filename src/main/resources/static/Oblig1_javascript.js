@@ -16,13 +16,13 @@ function submitTicket(){
     //Oppdater visningen
     displayTickets();
 
-    //Tøm inputfeltene
     document.getElementById('name').value = '';
     document.getElementById('email').value = '';
     document.getElementById('phone').value = '';
     document.getElementById('movie').value = '';
 
 }
+//For å få knappen "Slet alle billettene"
 function deleteAllTickets(){
     tickets = [];
     displayTickets();

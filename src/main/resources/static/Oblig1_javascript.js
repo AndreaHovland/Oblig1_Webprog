@@ -13,7 +13,7 @@ function submitTicket(){
     //Legg til billetten i arrayet
     tickets.push({name, email, phone, movie});
 
-    //Poodater visningen
+    //Oppdater visningen
     displayTickets();
 
     //Tøm inputfeltene

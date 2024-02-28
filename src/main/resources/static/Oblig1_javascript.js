@@ -28,8 +28,8 @@ function deleteAllTickets(){
     displayTickets();
 }
 function displayTickets(){
-    const ticketList = document.getElementById('ticketList');
-    ticketList.innerHTML = '';
+    const id = document.getElementById('ticketList');
+    id.innerHTML = '';
 
     tickets.forEach(ticket=>{
         const li = document.createElement('li');

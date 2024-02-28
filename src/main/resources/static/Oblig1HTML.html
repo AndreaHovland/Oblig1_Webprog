@@ -2,29 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kinobilettregistrering</title>
+    <script src="Oblig1_javascript.js"></script>
 </head>
 <body>
     <h1>Kinobillettregistrering</h1>
 
-    <label for="name">Navn:</label>
-    <input type="text" id="name"><br><br>
+    <label for="filmer">Velg film: </label>
+    <select id="filmer">
+        <option>Velg film</option>
+        <option>film1</option>
+        <option>film2</option>
+    </select>
+    <br>
+    <br>
 
-    <label for="email">E-post:</label>
-    <input type="email" id="email"><br><br>
+    <label for="antall biletter">Antall biletter</label>
+    <input type="text" id="antall biletter" required>
+    <span id="feilAntall" style="color: red"></span>
+    <br>
+    <br>
+    <br>
+    <label for="fornavn">Fornavn</label>
+    <input type="text" id="fornavn" required>
+    <span id="feilFornavn" style="color: red"></span>
+    <br>
+    <br>
+    <br>
+    <label for="etternavn">Etternavn</label>
+    <input type="text" id="etternavn" required>
+    <span id="feilEtternavn" style="color: red"></span>
+    <br>
+    <br>
+    <br>
+    <label for="telefonNr">TelefonNr</label>
+    <input type="text" id="telefonNr" required>
+    <span id="feilTelefonNr" style="color: red"></span>
+    <br>
+    <br>
+    <br>
+    <label for="epost">Epost</label>
+    <input type="text" id="epost" required>
+    <span id="feilEpost" style="color: red"></span>
+    <br>
+    <br>
+    <br>
 
-    <label for="phone">Telefonnummer:</label>
-    <input type="text" id="phone"><br><br>
+    <button onclick="kjopteBiletter();"Kjøp bilett</button>
+    <br>
+    <br>
+    <h2>Alle biletter</h2>
+    <ul id="kjopteBiletter"></ul>
 
-    <label for="movie">Film:</label>
-    <input type="text" id="movie"><br><br>
-
-    <buttom onclick="submitTicket()">Kjøp billett</buttom>
-    <buttom onclick="deleteAllTickets()">Slett alle billettene</buttom>
-
-    <h2>Alle billetter:</h2>
-    <ul id="ticketlist"></ul>
+    <br>
+    <br>
+    <button onclick="slettAlleBiletter()">Slett alle bilettene</button>
 
     <script src="script.js"></script>
 </body>

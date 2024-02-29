@@ -1,7 +1,7 @@
 // Oblig1 javascript
 
 // Array for å lagre kjøpte billetter
-let billetter = [];
+let biletter = [];
 
 // Funksjon for å kjøpe billetter
 function kjopteBiletter() {
@@ -13,6 +13,12 @@ function kjopteBiletter() {
     let TelefonNr = document.getElementById("telefonNr").value;
     let Epost = document.getElementById("epost").value;
 
+    // Regex validering på telefonnr (10 siffer)
+    const telefonRegex = /^\d{10}$/;
+
+    //Regex validering på epost
+    const epostRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
     const bilettValgt : {}={
         film: Film, Antall, Fornavn, Etternavn, TelefonNr, Epost
     };
@@ -23,19 +29,28 @@ function kjopteBiletter() {
         alert("Vennligst fyll ut alle feltene.");
         return;
     }
+    if (!telefonRegex.test(TelefonNr)) {
+        alert("Vennligst skriv inn et gyldig telefonnummer med 10 sifre.");
+        return;
+    }
+
+    if (!epostRegex.test(Epost)) {
+        alert("Vennligst skriv inn en gyldig e-postadresse.");
+        return;
+    }
 
     // Legg til billetten i billetter-arrayet
     billetter.push({
-        film: film,
-        antallBiletter: antallBiletter,
-        fornavn: fornavn,
-        etternavn: etternavn,
-        telefonNr: telefonNr,
-        epost: epost
+        film: Film,
+        antallBiletter: AntallBiletter,
+        fornavn: Fornavn,
+        etternavn: Etternavn,
+        telefonNr: TelefonNr,
+        epost: Epost
     });
 
     // Oppdater visningen av billetter
-    visBilletter();
+    bilettValgt();
 }
 //Tøm inputfeltene
 document.getElementById('filmer').value = "";
@@ -57,7 +72,7 @@ function visKjopteBiletter(){
     let htmlListe: string ="";
     for (let i =0; i<biletter.lenght; i++){
         let bilett=biletter[i];
-        htmlListe+=<li>Film: ${bilett.film}, Antall: ${bilett.antall}, Fornavn: ${bilett.fornavn}, Etternavn: ${bilett.etternavn}, TelefonNr: ${bilett.telefonNr}, Epost: ${bilett.epost}</li>
+        htmlListe+=<li>Film: ${bilett.film}, Antall: ${bilett.antallBiletter}, Fornavn: ${bilett.fornavn}, Etternavn: ${bilett.etternavn}, TelefonNr: ${bilett.telefonNr}, Epost: ${bilett.epost}</li>
     }
     bilettListe.innerHTML=htmlListe;
 }

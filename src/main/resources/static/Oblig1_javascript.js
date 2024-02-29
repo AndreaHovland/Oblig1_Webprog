@@ -7,7 +7,7 @@ let biletter = [];
 function kjopteBiletter() {
     // Hent verdier fra input-feltene
     let Film = document.getElementById("filmer").value;
-    let Antall = document.getElementById("antallBiletter").value;
+    let AntallBiletter = document.getElementById("antallBiletter").value;
     let Fornavn = document.getElementById("fornavn").value;
     let Etternavn = document.getElementById("etternavn").value;
     let TelefonNr = document.getElementById("telefonNr").value;
@@ -20,7 +20,7 @@ function kjopteBiletter() {
     const epostRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     const bilettValgt : {}={
-        film: Film, Antall, Fornavn, Etternavn, TelefonNr, Epost
+        film: Film, AntallBiletter, Fornavn, Etternavn, TelefonNr, Epost
     };
 
 
@@ -40,7 +40,7 @@ function kjopteBiletter() {
     }
 
     // Legg til billetten i billetter-arrayet
-    billetter.push({
+    biletter.push({
         film: Film,
         antallBiletter: AntallBiletter,
         fornavn: Fornavn,

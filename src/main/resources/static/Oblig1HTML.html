@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kinobilettregistrering</title>
-    <script src="Oblig1_javascript.js"></script>
+    <script src="script.js"></script>
 </head>
 <body>
-    <h1>Kinobillettregistrering</h1>
+    <h1>Kinobilettregistrering</h1>
 
     <label for="filmer">Velg film: </label>
     <select id="filmer">
         <option>Velg film</option>
-        <option>film1</option>
-        <option>film2</option>
+        <option>Titanic</option>
+        <option>Forest Gump</option>
     </select>
     <br>
     <br>
 
-    <label for="antall biletter">Antall biletter</label>
-    <input type="text" id="antall biletter" required>
+    <label for="antallBiletter">Antall billetter</label>
+    <input type="text" id="antallBiletter" required>
     <span id="feilAntall" style="color: red"></span>
     <br>
     <br>
@@ -49,7 +49,7 @@
     <br>
     <br>
 
-    <button onclick="kjopteBiletter();"Kjøp bilett</button>
+    <button> onclick="kjopteBiletter()>"Kjøp billett</button>
     <br>
     <br>
     <h2>Alle biletter</h2>
@@ -57,7 +57,7 @@
 
     <br>
     <br>
-    <button onclick="slettAlleBiletter()">Slett alle bilettene</button>
+    <button onclick="slettAlleBiletter()">Slett alle biletter</button>
 
     <script src="script.js"></script>
 </body>
